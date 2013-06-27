@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  
+	<title>Calculator with storage</title>
+    <meta name="description" content="Ein einfacher Taschenrechner mit mehreren Speicherpl&auml;tzen" />
+	<meta name="copyright" content="Andreas Lechner" />
+	<meta name="author" content="Andreas Lechner" />
+	<meta name="content-language" content="en" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="calculator.css" />
+	<script type="text/javascript" src="calculator.js"></script>
+</head>
+
+<body class="body" onload="start()">
+	<div class="wrapper">
+    <h1>Calculator</h1>
+
+        <form name="Calculator" action="" onsubmit="calc();return false;">
+            <table border="5" cellpadding="30" cellspacing="0">
+                <tr>
+                    <td id="tdDisplay">
+                        <input class="output1" id="out" style="size:120px; height:50px" /> <br /> <br/>  
+                        <input type="button"  class="button_mem" value="Save" onclick="m_in('memory')" />
+                    	<input type="button" class="buttonn_mem" value="Load" onclick="m_out('memory')" />
+                        <input type="button" class="button_mem" value="Del" onclick="clr_mem()" />
+                       	<span id="txtMemory"> Memory:
+                        <input class="output2" id="memory" style="size:105px;" /> </span><br />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="1" id="tdButtons">
+                        <table border="0" cellpadding="30" cellspacing="15">
+                            <tr>
+                            	<td><input type="button" id="buttons" class="button" value="      (     " onclick="set('(')" /></td>
+                                <td><input type="button" id="buttons" class="button" value="      )     " onclick="set(')')" /></td>
+                                <td><input type="reset"  id="buttons" class="button" value="      AC    " /></td>
+                                
+                                <td><input type="button" id="buttons" class="button" value="      +     " onclick="set('+')" /></td>
+                            </tr>
+                            <tr>                               
+                                <td><input type="button" id="buttons" class="button" value="      7     " onclick="set('7')" /></td>
+                                <td><input type="button" id="buttons" class="button" value="      8     " onclick="set('8')" /></td>
+                                <td><input type="button" id="buttons" class="button" value="      9     " onclick="set('9')" /></td>
+                                <td><input type="button" id="buttons" class="button" value="      -     " onclick="set('-')" /></td>
+                            </tr>
+                            <tr>
+                                <td><input type="button" id="buttons" class="button" value="      4     " onclick="set('4')" /></td>
+                                <td><input type="button" id="buttons" class="button" value="      5     " onclick="set('5')" /></td>
+                                <td><input type="button" id="buttons" class="button" value="      6     " onclick="set('6')" /></td>
+                                
+                                <td><input type="button" id="buttons" class="button" value="      *     " onclick="set('*')" /></td>
+                            </tr>
+                            <tr>
+                                <td><input type="button" id="buttons" class="button" value="      1     " onclick="set('1')" /></td>
+                                <td><input type="button" id="buttons" class="button" value="      2     " onclick="set('2')" /></td>
+                                <td><input type="button" id="buttons" class="button" value="      3     " onclick="set('3')" /></td>
+                                <td><input type="button" id="buttons" class="button" value="      /     " onclick="set('/')" /></td>
+                            </tr>
+                            <tr>
+                                <td><input type="button" id="buttons" class="button" value="      0     " onclick="set('0')" /></td>
+                                <td><input type="button" id="buttons" class="button" value="      .     " onclick="set('.')" /></td>
+                                <td><input type="button" id="buttons" class="button" value="      C     " onclick="del()" /></td>
+                                <td><input type="submit" id="enter" class="button" style="background-color:#aaffaa" value="  =   " onkeypress="calc()" onclick="calc()" /></td>
+                            </tr>
+                        </table>
+                	</td>
+                </tr>
+            
+            </table>
+        </form>
+       
+	</div>
+    <p>
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-xhtml10" alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
+  </p>
+
+</body>
+</html>
